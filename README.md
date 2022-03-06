@@ -109,3 +109,14 @@ Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:34:40) [MSC v.1927 64 bit (AM
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from app import db
 >>> db.create_all()
+
+
+
+GITFLOW (PROCESS DEV SUR GIT)
+depuis le main
+git branch nopmDeTaBranche
+git checkout nopmDeTaBranche
+(tu dev)
+git add *
+git commit -m "nomducommi"
+git push -u origin
