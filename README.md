@@ -3,23 +3,22 @@
 ## dev
 **virtual environnement**
 https://docs.python.org/fr/3/library/venv.html
-
-
-
-
 https://www.youtube.com/watch?v=mEUSNId1Hfc&ab_channel=ParwizForogh
 https://www.youtube.com/watch?v=mEUSNId1Hfc&ab_channel=ParwizForogh
-
-
 https://docs.google.com/spreadsheets/d/1OsP6hpFKBpuHRt95DqZw1-cb5kK-ZYw2tDmvgXyCYA8/edit#gid=25797257
 https://github.com/dsznajder/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md                   snippets rfe rfc
 
-
-
-MANIP TUTO FLASK python react
-
-api
+projet :
+api en python
 react front
+
+**Step installation**
+**Faire tourner le projet pour la première fois**
+j'ouvre un terminal, je me mets là où je veux placer mon dossier avec "cd /path/...."
+"git init"
+"git remote add origin pathACollerDepuisGitHub"
+"git pull origin main"
+-> tu es maintenant relié au repo
 
 ##imports :
 --partie back flask
@@ -38,20 +37,23 @@ npm install -g expo-cli
 npm install @react-native-paper                   ---pour les boutons
 npm install @react-navigation/native              ---pour les route
 
+# installer son venv avec le requirements.txt
+dans le terminal depuis le dossier /api
+python -m pip install -r requirements.txt
+-> configure le venv
+
+**Step développement**
+**MANIP TUTO FLASK python react**
 
 ###faire fonctioner son projet :
-
-créer un venv depuis cmd
-C:\>C:\Python39\python -m venv C:/Users/teiss/Documents/EPSI\I1/GEEKFIT/app/venv 
-
 #activer /désactiver venv depuis powershell
+Activer
 PS C:\Users\teiss\Documents\EPSI\I1\GEEKFIT> .\\api\venv\Scripts\Activate.ps1
 ou encore PS C:\Users\teiss\Documents\EPSI\I1\GEEKFIT> .\\app\venv\Scripts\Activate.ps1
-(venv) PS C:\Users\teiss\Documents\EPSI\I1\GEEKFIT> 
+Desactiver
 (venv) PS C:\Users\teiss\Documents\EPSI\I1\GEEKFIT> deactivate
-PS C:\Users\teiss\Documents\EPSI\I1\GEEKFIT> 
 
-
+**Run API**
 #run en debug true depuis vscode
 f5 
 flask
@@ -62,14 +64,14 @@ OU on va sur la page app et on execute "démarrage du debuggage"
 #ouvrir postman
 collection GeekFit créée
 
-
 #lancer phpMyAdmin local
 ouvrir wamp
 démarrer le service mariadb port 3306 et enlever mysql de mes deux
 http://localhost/phpmyadmin/index.php?route=/&route=%2F
 id root mdp riendutout
 
-
+**Creer db**
+(Pour le moment chacun créé sa bd chez lui lorsqu'il bosse sur le projet
 #créer la db depuis flask
 dans /api
 python (ouvre un python terminal)
@@ -77,9 +79,19 @@ from app import db
 db.create_all()
 result : c'est maintenant linked et se met à jour automatiquement
 
-#creer le projet
-cd app
-expo init nomDuProjet
+
+**GITFLOW (PROCESS DEV SUR GIT)**
+!!!AVANT DE COMMENCER TON DEV!!!!
+git checkout main
+-> doit renvoyer "Your branch is up to date with 'origin/main'.". S'il n'est pas à jour, faire un "git pull origin main"
+git branch nomDeTaBranche   (ex : ID3_page_connexion_detail -> IDnuméro de la user story et titre avec _)
+git checkout nopmDeTaBranche (ex : ID3_page_connexion_detail)
+!!!!!!(tu dev)!!!!!
+git add *
+git commit -m "nomducommi"
+git push -u origin
+
+
 
 
 
@@ -93,14 +105,10 @@ dans le fetch côté réact
 
 https://reactnavigation.org/docs/nesting-navigators
 
-j'en suis au step15 creation branche step15 react project poc
-
+Configuration d'alexia seulement :
 **** il existe deux github
 git push -u poc    ---->github poc
 git push -u origin ---->github GEEKFIT
-
-
-
 
 pour faire fonctionner en développement
 (venv) PS C:\Users\teiss\Documents\EPSI\I1\GEEKFIT\api> flask run --host=0.0.0.0
@@ -112,11 +120,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 
-GITFLOW (PROCESS DEV SUR GIT)
-depuis le main
-git branch nopmDeTaBranche
-git checkout nopmDeTaBranche
-(tu dev)
-git add *
-git commit -m "nomducommi"
-git push -u origin
+
+
+**ce que tu fais quand tu créé le projet**
+
+#creer le projet
+cd app
+expo init nomDuProjet
+
+
+
+créer un venv depuis cmd
+C:\>C:\Python39\python -m venv C:/Users/teiss/Documents/EPSI\I1/GEEKFIT/app/venv 
+
+
