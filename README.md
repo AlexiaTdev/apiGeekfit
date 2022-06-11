@@ -38,6 +38,7 @@ npm install @react-native-paper                   ---pour les boutons
 npm install @react-navigation/native              ---pour les route
 
 # installer son venv avec le requirements.txt
+C:\Python39\python.exe -m pip install --upgrade pip --user
 dans le terminal depuis le dossier /api
 python -m pip install -r requirements.txt
 -> configure le venv
